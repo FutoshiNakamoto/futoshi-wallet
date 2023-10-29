@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Futoshi Wallet</title>
+    <link rel="icon" type="image/x-icon" href="Logo.png">
+    <link rel="shortcut icon" href="Logo.png" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Futoshi Wallet</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Connect</a></li>
+                <li><a href="#">Buy</a></li>
+                <li><a href="#">Sell</a></li>
+                <li><a href="#">Bridge</a></li>
+                <li><a href="#">Visit Website</a></li>
+                <li><a href="#">Telegram</a></li>
+                <li><a href="#">Twitter</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="wallet-info">
+            <div class="balance">
+                <h2>Total Balance</h2>
+                <p>1000 FUT</p>
+            </div>
+            <div class="total-value">
+                <h2>Total Value</h2>
+                <p>$1000</p>
+            </div>
+            <div class="container">
+                <div class="buy-sell-container">
+                    
+                    <div class="tabs">
+                        <button class="tab-button active" id="buy-tab">Send</button>
+                        <button class="tab-button" id="sell-tab">Receive</button>
+                    </div>
+        
+                    <div class="tab-content active" id="buy-content">
+                        <label for="buy-quantity" class="input-label">Reciever:</label>
+                        <input type="number" id="buy-quantity" class="input-box" min="0" step="0.000001" placeholder="Address or ID">
+                        <label for="buy-quantity" class="input-label">Amount:</label>
+                        <input type="number" id="buy-quantity" class="input-box" min="0" step="0.000001" placeholder="Enter amount to Send">
+                        <button class="action-button" id="buy-button" onclick="buy()">Transfer</button>
+                    </div>
+        
+                    <div class="tab-content" id="sell-content">
+                        <h2>Request</h2>
+                        <label for="sell-quantity" class="input-label">Enter Amount to Request:</label>
+                        <input type="number" id="sell-quantity" class="input-box" min="0" step="0.000001" placeholder="Amount">
+                        <button id="sell-button" onclick="checkAllowance()" class="action-button">Generate Link</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="chart">
+            <iframe src="https://dexscreener.com/bsc/0x2899e28dbddcd517d50039d66bc7c1acc6f8e298" frameborder="0"></iframe>
+        </section> 
+    </main>       
+    <section class="transactions">
+        <h2>Transaction History</h2>
+        <ul>
+            <li>
+                <span class="transaction-date">2023-10-29</span>
+                <span class="transaction-type">Buy</span>
+                <span class="transaction-amount">100 FUT</span>
+                <span class="transaction-id">TX123</span>
+            </li>
+            <li>
+                <span class="transaction-date">2023-10-28</span>
+                <span class="transaction-type">Sell</span>
+                <span class="transaction-amount">50 FUT</span>
+                <span class="transaction-id">TX124</span>
+            </li>
+    </section>
+    <footer>
+        <p>&copy; 2023 Futoshi Wallet</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
